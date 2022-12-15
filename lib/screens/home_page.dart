@@ -22,7 +22,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final ConstitutionController constitutionController = Get.find();
-  String search = "";
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -63,10 +62,7 @@ class _HomePageState extends State<HomePage> {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: CupertinoSearchTextField(
                     onChanged: ((value) {
-                      setState(() {
-                        search = value;
-                      }
-                      );
+                      
                     }),
                     autofocus: true,
                     itemColor: Colors.black,
@@ -107,27 +103,13 @@ class _HomePageState extends State<HomePage> {
                           itemBuilder: (context, index) {
                             Constitution constitution =
                                 constitutionController.constitutionList[index];
-                            if (search.isEmpty) {
-                              return InkWell(
-                                  onTap: (() {
-                                    Get.to(BranchPage(
-                                        constitutionId: constitution));
-                                  }),
-                                  child: ConstitutionCard(constitutionController
-                                      .constitutionList[index]));
-                            }
-                            if (constitution.title
-                                .toLowerCase()
-                                .contains(search)) {
-                              return InkWell(
-                                  onTap: (() {
-                                    Get.to(BranchPage(
-                                        constitutionId: constitution));
-                                  }),
-                                  child: ConstitutionCard(constitutionController
-                                      .constitutionList[index]));
-                            }
-                            return Text("Constitution Not Found");
+                            return InkWell(
+                                onTap: (() {
+                                  Get.to(
+                                      BranchPage(constitutionId: constitution));
+                                }),
+                                child: ConstitutionCard(constitutionController
+                                    .constitutionList[index]));
                           });
                     }
                   }),

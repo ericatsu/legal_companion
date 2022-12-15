@@ -79,9 +79,9 @@ class BranchPage extends StatelessWidget {
                       //   ),
                       // ),
                       SizedBox(
-                        child: SvgPicture.asset("assets/images/ug.svg"),
                         height: 120,
                         width: 100,
+                        child: SvgPicture.asset("assets/images/ug.svg"),
                       ),
                       const SizedBox(height: 50),
                       Text(
@@ -98,6 +98,7 @@ class BranchPage extends StatelessWidget {
                       Flexible(
                         child: Ink(
                           child: ListView(
+                            padding: const EdgeInsets.all(10),
                             children: [
                               SizedBox(height: 25,),
                               ListCard(
@@ -152,7 +153,6 @@ class BranchPage extends StatelessWidget {
                                 },
                               ),
                             ],
-                            padding: const EdgeInsets.all(10),
                           ),
                         ),
                       ),
@@ -167,8 +167,8 @@ class BranchPage extends StatelessWidget {
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {},
-            child: const Icon(Icons.share_rounded, size: 30,),
             backgroundColor: const Color(0xFF0B3C5D),
+            child: const Icon(Icons.share_rounded, size: 30,),
           ),
         ),
       ),

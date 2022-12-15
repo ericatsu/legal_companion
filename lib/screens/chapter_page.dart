@@ -16,8 +16,6 @@ class ChapterPage extends StatelessWidget {
 
   final ConstitutionController constitutionController = Get.find();
 
-//TODO: Implement search system for rest of pages
-
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;

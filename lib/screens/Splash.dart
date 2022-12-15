@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: file_names
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class Splash extends StatelessWidget {
       splash: 
       Lottie.asset('splash.json'), 
       backgroundColor: const Color(0xFF0B3C5D),
-      nextScreen: OnBoard(),
+      nextScreen: const OnBoard(),
       duration: 3000,
       splashIconSize: 280,
     );

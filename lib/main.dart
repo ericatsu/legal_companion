@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:legal_companion/controller/constitution_controller.dart';
-import 'package:legal_companion/screens/Splash.dart';
+import 'package:legal_companion/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());

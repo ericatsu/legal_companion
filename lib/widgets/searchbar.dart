@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../model/constitution_model.dart';
 
 class SearchBar extends StatefulWidget {
-  SearchBar({super.key});
+  const SearchBar({super.key});
 
   @override
   State<SearchBar> createState() => _SearchBarState();
