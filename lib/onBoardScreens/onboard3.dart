@@ -23,7 +23,7 @@ class Onboard3 extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 "assets/images/legal.svg",
-                height: size.height * 0.46,
+                height: size.height * 0.42,
               ),
               Text(
                 onboard3Title,

@@ -1,14 +1,19 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:legal_companion/controller/constitution_controller.dart';
+import 'package:legal_companion/screens/onboard.dart';
 import 'package:legal_companion/screens/splash.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -20,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
+      home: Splash(),
     );
   }
 }

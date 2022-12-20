@@ -12,7 +12,7 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       splash: 
-      Lottie.asset('splash.json'), 
+      Lottie.asset('assets/splash.json'), 
       backgroundColor: const Color(0xFF0B3C5D),
       nextScreen: const OnBoard(),
       duration: 3000,

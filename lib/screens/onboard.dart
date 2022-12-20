@@ -43,7 +43,24 @@ class _OnBoardState extends State<OnBoard> {
         ),
 
         //Skip
+        onLastPage ?
         Positioned(
+          top: 25,
+          right: 20,
+          child: TextButton(
+            onPressed: () {
+              _controller.jumpToPage(2);
+            },
+            child: Text(" ",
+            style: GoogleFonts.openSans(
+                textStyle: TextStyle(
+                  fontSize: 20.0,
+                  color: kMainColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),),
+          ),
+        ) : Positioned(
           top: 25,
           right: 20,
           child: TextButton(
@@ -60,6 +77,7 @@ class _OnBoardState extends State<OnBoard> {
               ),),
           ),
         ),
+
 
         // buttons
         onLastPage

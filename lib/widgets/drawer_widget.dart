@@ -12,74 +12,76 @@ class DrawerWidget extends StatelessWidget {
         color: Colors.white70,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24.0, 80, 24, 0),
-          child: Column(
-            children: [
-              profileWidget(),
-              const SizedBox(
-                height: 40,
-              ),
-              const Divider(
-                thickness: 1,
-                height: 10,
-                color: Colors.black,
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              DrawerModel(
-                name: 'Profie',
-                icon: Icons.account_box_rounded,
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              DrawerModel(
-                name: 'Requests',
-                icon: Icons.send_outlined,
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              DrawerModel(
-                name: 'Organization',
-                icon: Icons.people,
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              DrawerModel(
-                name: 'feedbacks',
-                icon: Icons.message_outlined,
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const Divider(
-                thickness: 1,
-                height: 10,
-                color: Colors.black,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              DrawerModel(
-                name: 'Setting',
-                icon: Icons.settings,
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              DrawerModel(
-                name: 'Log out',
-                icon: Icons.logout,
-                onPressed: () {},
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                profileWidget(),
+                const SizedBox(
+                  height: 35,
+                ),
+                const Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.black,
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                DrawerModel(
+                  name: 'Profie',
+                  icon: Icons.account_box_rounded,
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DrawerModel(
+                  name: 'Requests',
+                  icon: Icons.send_outlined,
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DrawerModel(
+                  name: 'Organization',
+                  icon: Icons.people,
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DrawerModel(
+                  name: 'feedbacks',
+                  icon: Icons.message_outlined,
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Divider(
+                  thickness: 1,
+                  height: 5,
+                  color: Colors.black,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DrawerModel(
+                  name: 'Setting',
+                  icon: Icons.settings,
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DrawerModel(
+                  name: 'Log out',
+                  icon: Icons.logout,
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -91,7 +93,7 @@ class DrawerWidget extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 40,
-          backgroundImage: AssetImage("images/dp.jpg"),
+          backgroundImage: AssetImage("assets/images/dp.jpg"),
         ),
         const SizedBox(
           width: 20,

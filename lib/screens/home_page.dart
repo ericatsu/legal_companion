@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:legal_companion/screens/branch_page.dart';
+import 'package:legal_companion/screens/constitution_page.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../controller/constitution_controller.dart';
