@@ -16,7 +16,7 @@ class Splash extends StatelessWidget {
       backgroundColor: const Color(0xFF0B3C5D),
       nextScreen: const OnBoard(),
       duration: 3000,
-      splashIconSize: 280,
+      splashIconSize: 380,
     );
   }
 }

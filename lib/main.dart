@@ -15,17 +15,24 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     Get.lazyPut(() => ConstitutionController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Splash(),
+      home: FutureBuilder(
+          future: _initialization,
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              //print("Error");
+            }
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Splash();
+            }
+            return Center(child: CircularProgressIndicator());
+          }),
     );
   }
 }
