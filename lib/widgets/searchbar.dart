@@ -1,5 +1,12 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:legal_companion/controller/constitution_controller.dart';
+import 'package:legal_companion/services/service.dart';
+
+import '../model/constitution_model.dart';
+
 
 
 class SearchBar extends StatefulWidget {
@@ -10,24 +17,35 @@ class SearchBar extends StatefulWidget {
 }
 
 class _SearchBarState extends State<SearchBar> {
-  String search = "";
 
   @override
   Widget build(BuildContext context) {
     return Container(
                     margin: const EdgeInsets.symmetric(vertical: 30),
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                    child: CupertinoSearchTextField(
-                      onChanged: ((value) {
-                        setState(() {
-                          search = value;
-                        });
-                      }),
+                    child: const CupertinoSearchTextField(
+            //           onSubmitted: (search) async {
+            //             var response = await HttpService.getConstitutions(search);
+            //             if (response.statusCode == 200) {
+            //               List<dynamic> body = json.decode(response.body);
+
+            //               List<Constitution> constitutions = body
+            // .map(
+            //   (dynamic item) => Constitution.fromJson(item),
+            // )
+            // .toList();
+            //               var search = constitutionController.constitutionList[index];
+            //               setState(() {
+            //                  search =
+            //                  print("object");
+            //               });
+            //             }
+            //           },
                       autofocus: true,
                       itemColor: Colors.black,
                       itemSize: 20,
-                      backgroundColor: const Color.fromARGB(255, 185, 204, 218),
-                      placeholderStyle: const TextStyle(
+                      backgroundColor: Color.fromARGB(255, 185, 204, 218),
+                      placeholderStyle: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
                       ),

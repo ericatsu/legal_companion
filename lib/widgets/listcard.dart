@@ -20,8 +20,8 @@ class ListCard extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
 
     return SizedBox(
-      height: height * 0.08,
-      width: width * 0.06,
+      height: height * 0.09,
+      width: width * 0.07,
       child: InkWell(
         onTap: action,
         child: Card(

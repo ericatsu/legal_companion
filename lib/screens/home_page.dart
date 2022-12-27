@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:legal_companion/screens/constitution_page.dart';
+import 'package:legal_companion/widgets/searchbar.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../controller/constitution_controller.dart';
@@ -56,27 +57,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 // The Search bar
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 30),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                  child: CupertinoSearchTextField(
-                    onChanged: ((value) {
-                      
-                    }),
-                    autofocus: true,
-                    itemColor: Colors.black,
-                    itemSize: 20,
-                    backgroundColor: const Color.fromARGB(255, 185, 204, 218),
-                    placeholderStyle: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
+                SearchBar(),
 
                 const SizedBox(
-                  height: 70,
+                  height: 45,
                 ),
                 Flexible(
                   child: Obx(() {
