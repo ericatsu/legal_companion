@@ -52,32 +52,6 @@ class BranchPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
                     children: [
-                      // Align(
-                      //   alignment: Alignment.topLeft,
-                      //   child: Container(
-                      //     height: 35,
-                      //     width: 85,
-                      //     decoration: BoxDecoration(
-                      //       borderRadius: BorderRadius.circular(20.0),
-                      //       color: const Color.fromARGB(255, 248, 224, 88),
-                      //       shape: BoxShape.rectangle,
-                      //     ),
-                      //     child: Row(
-                      //       children: [
-                      //         IconButton(
-                      //           onPressed: () {},
-                      //           icon: const Icon(Icons.share_rounded, color: Colors.white, size: 20,)),
-                      //         const Text("Share",
-                      //         style: TextStyle(
-                      //               fontSize: 15,
-                      //               fontWeight: FontWeight.bold,
-                      //               color: Colors.white,
-                      //             ),
-                      //           ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                       SizedBox(
                         height: 120,
                         width: 100,
